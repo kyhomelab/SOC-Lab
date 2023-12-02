@@ -10,6 +10,7 @@ Comprehensive documentation for setting up a Security Operations Center (SOC) la
 - [PfSense](https://www.pfsense.org/)
 - Windows 10 VM
 - [BadBlood](https://github.com/davidprowe/BadBlood)
+- [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
   <br>
   
 ## PfSense
@@ -63,3 +64,4 @@ After doing that tracert was able to ping successfully at 1
 ----------------
 Update: After 2 more hours of troubleshooting...the issue was the IPv6...
 ```
+![Domain](https://i.imgur.com/byAvKv3.png "FINAAALLLLLYYYYYYYY")
