@@ -30,6 +30,7 @@ Comprehensive documentation for setting up a Security Operations Center (SOC) la
 5. Under Server Manager I went to Roles and Features > Select Server Roles > Select Active Directory Domain Services > Add Features
 6. After the installation completed I Promoted the server to a domain controller
 7. Created a New Forest named soc.lab and after a restart I now have an Active Directory Domain, now we need to populate it
+8. I created a user for myself to join the AD on Win10
 <br>
 
 ## BadBlood
@@ -45,3 +46,17 @@ git clone https://github.com/davidprowe/badblood.git
 3. Once BadBlood finished running, it generated 2500 Users, 500 Groups, and 100 Computers
 ![BadBlood](https://i.imgur.com/1LJDDT9.png)
 ![BadBlood](https://i.imgur.com/fnsg7vE.png)
+
+## Windows 10 VM (22H2)
+1. Downloaded the [Windows 10 Iso](https://www.microsoft.com/en-us/software-download/windows10)
+3. Created a VM utilizing Windows 10 Pro, once loaded in, changed the PC name to SOC-WIN10
+4. Went to Settings > System > About > Rename this PC (advanced) > Computer Name > Change (Domain) > Member of Domain: soc
+   ![Network Path](https://i.imgur.com/5gsv6QO.png)
+   ![Network Path](https://i.imgur.com/4MmFKKL.png)
+```bash
+Unforntanetly I kept getting either a DNS error or a Network Path error.
+Took me a few hours to resolve this issue.
+Pinging the server IP or the DNS from Win10 was always successful.
+After a while, I tried pinging the Win10 from the WinServer with all requests timing out. Even did tracert to no avail
+I disabled the firewall for both Win10 and WinServer since the communication was being blocked from WinServ to Win10
+After doing that tracert was able to ping successfully at 1
