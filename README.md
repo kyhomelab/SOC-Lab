@@ -60,3 +60,6 @@ Pinging the server IP or the DNS from Win10 was always successful.
 After a while, I tried pinging the Win10 from the WinServer with all requests timing out. Even did tracert to no avail
 I disabled the firewall for both Win10 and WinServer since the communication was being blocked from WinServ to Win10
 After doing that tracert was able to ping successfully at 1
+----------------
+Update: After 2 more hours of troubleshooting...the issue was the IPv6...
+```
