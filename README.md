@@ -11,6 +11,7 @@ Comprehensive documentation for setting up a Security Operations Center (SOC) la
 - Windows 10 VM
 - [BadBlood](https://github.com/davidprowe/BadBlood)
 - [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [CrowdSec](https://www.crowdsec.net/)
   <br>
   
 ## PfSense
@@ -65,3 +66,19 @@ After doing that tracert was able to ping successfully at 1
 Update: After 2 more hours of troubleshooting...the issue was the IPv6...
 ```
 ![Domain](https://i.imgur.com/byAvKv3.png "FINAAALLLLLYYYYYYYY")
+
+## Sysmon
+1. Downloaded [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+2. Extracted zip file to my Desktop
+3. Opened Cmd as admin, navigated to directory with
+   ```bash
+   cd C:\Users\kyhomelab\desktop
+   cd OGSysmon
+   #ran the command to install:
+   sysmon -i
+   #to see if it is running:
+   sc query Sysmon
+   ```
+     ![Sysmon](https://i.imgur.com/1UBnjBj.png)
+
+## CrowdSec
